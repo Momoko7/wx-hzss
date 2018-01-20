@@ -1,0 +1,108 @@
+<!--index.wxml-->
+<!--引入tab标签组件-->
+<import src="/zanui/tab/index.wxml"/>
+
+<!--轮播图 swiper start-->
+<view class=""></view>
+<swiper indicator-dots="true"
+        indicator-color="rgba(255,255,255,0.5)"
+        indicator-active-color="#ffffff"
+        autoplay="true">
+  <block wx:for="{{imgUrls}}" wx:key="key">
+    <swiper-item>
+      <image src="{{item}}"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<!--轮播图 swiper end-->
+
+<!--内容：程老师/讲师团/同盟汇/命运合伙人-->
+<view class="flex-box">
+  <view class="flex-item">
+    <image src="/static/index-1.jpg"></image>
+    <text>程老师</text>
+  </view>
+  <view class="flex-item">
+    <image src="/static/index-2.jpg"></image>
+    <text>讲师团</text>
+  </view>
+  <view class="flex-item">
+    <image src="/static/index-3.jpg"></image>
+    <text>同盟汇</text>
+  </view>
+  <view class="flex-item">
+    <image src="/static/index-4.jpg"></image>
+    <text>命运合伙人</text>
+  </view>
+</view>
+
+<!--标签页：即将开始/精彩感想 start-->
+<template is="zan-tab" data="{{ ...tab, componentId: 'tab' }}"></template>
+
+<!--即将开始 start-->
+<view wx:if="{{tab.selectedId==1}}">
+  <block wx:for="abc" wx:key="key">
+    <navigator url="./course/course" style="display: block">
+      <view class="zan-card">
+        <!-- 卡片左侧商品图片 -->
+        <view class="zan-card__thumb">
+          <image class="zan-card__img"
+                 src="/static/img1.jpg"
+                 mode="aspectFit"
+          ></image>
+        </view>
+        <!-- 卡片右侧详情描述 -->
+        <view class="zan-card__detail">
+          <!-- 商品标题行 -->
+          <!-- 每行可以使用 zan-card__detail-row 来控制展示区域 -->
+          <!-- 每行里面可以用 zan-card__left-col zan-card__right-col 来控制左右展示 -->
+          <view class="zan-card__detail-row">
+            <view class=" zan-ellipsis--l2">
+              程老师带你走进演讲的知识海洋中
+            </view>
+          </view>
+          <!-- 商品附属信息展示行 -->
+          <view class="zan-card__detail-row zan-c-gray-darker">
+            <view class="zan-card__left-col font-yellow" style="font-size: 85%">
+              活动进行中
+            </view>
+          </view>
+          <view class="zan-card__detail-row zan-c-gray-darker">
+            <view class="zan-card__left-col font-gray">
+              <view class="zan-icon zan-icon-password-view"></view>1232
+              <view class="zan-icon zan-icon-like-o"></view>1322123
+            </view>
+          </view>
+          <!-- 商品操作按钮相关 -->
+          <view class="zan-card__detail-row zan-c-gray-darker">
+            <view class="right-btn">200人已报名</view>
+            <view class="zan-card__left-col zan-c-red zan-font-bold">￥200.00</view>
+          </view>
+        </view>
+      </view>
+    </navigator>
+
+  </block>
+</view>
+<!--精彩感想 start-->
+<view wx:else class="idea-list-box">
+  <navigator url="" class="a-block" wx:for="i in 5" wx:key="key">
+    <view class="zan-row">
+      <view class="zan-col zan-col-6 flex-col">
+        <view class="img-box">
+          <image src="/static/header.png"></image>
+        </view>
+        <text class="name">小明</text>
+        <text class="time">2017-01-01 12:00</text>
+      </view>
+      <view class="zan-col zan-col-18">
+        <view class="message">
+        【同盟汇】成员阿萨德破耳机批发乐山大佛就，扫地方静安寺。sad佛牌。阿斯顿发生地铁，阿尔；阿斯蒂芬啊答复
+        【同盟汇】成员阿萨德破耳机批发乐山大佛就，扫地方静安寺。sad佛牌。阿斯顿发生地铁，阿尔；阿斯蒂芬啊答复
+        </view>
+      </view>
+    </view>
+  </navigator>
+</view>
+<!--即将开始/精彩演讲 end-->
+<!--标签页 end-->

@@ -1,0 +1,51 @@
+/**app.wxss**/
+@import "./zanui/index.wxss";
+/*精彩感想*/
+.idea-list-box{
+  background: #f8f8f8;
+}
+.idea-list-box .a-block{
+  display: block;
+  width: 95%;
+  margin: 20rpx;
+  padding: 20rpx 0;
+  background: white;
+  border-radius: 20rpx;
+}
+.idea-list-box .flex-col{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.idea-list-box .img-box{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 20rpx;
+  overflow: 20rpx;
+}
+.idea-list-box .img-box image{
+  width: 100%;
+  height: 100%;
+}
+.idea-list-box .name{
+  font-size: 70%;
+  color: #888;
+}
+.idea-list-box .time{
+  font-size: 50%;
+  color: #aaaaaa;
+}
+.idea-list-box .message{
+  font-size: 75%;
+  letter-spacing: 1px;
+  line-height: 1.3em;
+  color: #777777;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  margin: 0 6rpx;
+}

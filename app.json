@@ -1,0 +1,44 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/course/course",
+    "pages/previous/index",
+    "pages/idealist/index",
+    "pages/idealist/detail/detail",
+    "pages/user/index",
+    "pages/user/myorder/myorder",
+    "pages/user/collect/collect",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#f44",
+    "navigationBarTitleText": "合纵盛世",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color":"#666",
+    "selectedColor":"#ff4444",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath":"./static/tabicon/icon-1.png",
+      "selectedIconPath":"./static/tabicon/icon-1-on.png"
+    }, {
+      "pagePath": "pages/previous/index",
+      "text": "往期精彩",
+      "iconPath":"./static/tabicon/icon-2.png",
+      "selectedIconPath":"./static/tabicon/icon-2-on.png"
+    }, {
+      "pagePath": "pages/idealist/index",
+      "text": "感想列表",
+      "iconPath":"./static/tabicon/icon-3.png",
+      "selectedIconPath":"./static/tabicon/icon-3-on.png"
+    }, {
+      "pagePath": "pages/user/index",
+      "text": "我的",
+      "iconPath":"./static/tabicon/icon-4.png",
+      "selectedIconPath":"./static/tabicon/icon-4-on.png"
+    }]
+  }
+}

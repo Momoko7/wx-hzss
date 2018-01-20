@@ -1,0 +1,3 @@
+<!--pages/user/myorder/myorder.wxml-->
+<import src="/zanui/tab/index.wxml" />
+<template is="zan-tab" data="{{ ...tab}}"></template>

@@ -1,0 +1,29 @@
+/* pages/user/index.wxss */
+.header-box{
+    height: 200px;
+    width: 100%;
+    /*background: #f84f4c;*/
+    background: #ff4444;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.img-box{
+    width: 130rpx;
+    height: 130rpx;
+    border-radius: 100rpx;
+    overflow: hidden;
+    margin-bottom: 20rpx;
+}
+.img-box image{
+    width: 100%;
+    height: 100%;
+}
+.zan-cell{
+    border-bottom: #f0f0f0 1px solid;
+}
+.zan-cell .zan-icon{
+    font-size: 120%;
+}
