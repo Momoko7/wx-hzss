@@ -2,67 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="760a9f8b-1e75-4f1c-9ac8-7b1e5f87b6aa" name="Default" comment="ok">
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/index/cheng/cheng.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/index/cheng/cheng.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/index/cheng/cheng.wxml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/index/cheng/cheng.wxss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/index/partner/partner.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/index/partner/partner.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/index/partner/partner.wxml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/index/partner/partner.wxss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/index/team/team.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/index/team/team.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/index/team/team.wxml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/index/team/team.wxss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/index/tong/tong.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/index/tong/tong.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/index/tong/tong.wxml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/index/tong/tong.wxss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/previous/course/course.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/previous/course/course.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/previous/course/course.wxml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/previous/course/course.wxss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/user/myorder/comment/comment.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/user/myorder/comment/comment.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/user/myorder/comment/comment.wxml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/user/myorder/comment/comment.wxss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/user/postidea/postidea.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/user/postidea/postidea.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/user/postidea/postidea.wxml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/user/postidea/postidea.wxss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/bg1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/bg2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/bg3.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/cheng.JPG" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/ht.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/jst.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/jstbg.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/utils/config.js" />
-      <change beforePath="$PROJECT_DIR$/app.json" afterPath="$PROJECT_DIR$/app.json" />
-      <change beforePath="$PROJECT_DIR$/app.wxss" afterPath="$PROJECT_DIR$/app.wxss" />
-      <change beforePath="$PROJECT_DIR$/pages/idealist/detail/detail.js" afterPath="$PROJECT_DIR$/pages/idealist/detail/detail.js" />
-      <change beforePath="$PROJECT_DIR$/pages/idealist/detail/detail.wxml" afterPath="$PROJECT_DIR$/pages/idealist/detail/detail.wxml" />
-      <change beforePath="$PROJECT_DIR$/pages/idealist/detail/detail.wxss" afterPath="$PROJECT_DIR$/pages/idealist/detail/detail.wxss" />
-      <change beforePath="$PROJECT_DIR$/pages/idealist/index.json" afterPath="$PROJECT_DIR$/pages/idealist/index.json" />
-      <change beforePath="$PROJECT_DIR$/pages/idealist/index.wxml" afterPath="$PROJECT_DIR$/pages/idealist/index.wxml" />
-      <change beforePath="$PROJECT_DIR$/pages/index/course/course.js" afterPath="$PROJECT_DIR$/pages/index/course/course.js" />
-      <change beforePath="$PROJECT_DIR$/pages/index/course/course.wxml" afterPath="$PROJECT_DIR$/pages/index/course/course.wxml" />
-      <change beforePath="$PROJECT_DIR$/pages/index/course/course.wxss" afterPath="$PROJECT_DIR$/pages/index/course/course.wxss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/plugins/bluebird.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/utils/wxApi.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/utils/wxRequest.js" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change beforePath="$PROJECT_DIR$/pages/index/index.js" afterPath="$PROJECT_DIR$/pages/index/index.js" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.wxml" afterPath="$PROJECT_DIR$/pages/index/index.wxml" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.wxss" afterPath="$PROJECT_DIR$/pages/index/index.wxss" />
-      <change beforePath="$PROJECT_DIR$/pages/previous/index.json" afterPath="$PROJECT_DIR$/pages/previous/index.json" />
-      <change beforePath="$PROJECT_DIR$/pages/previous/index.wxml" afterPath="$PROJECT_DIR$/pages/previous/index.wxml" />
-      <change beforePath="$PROJECT_DIR$/pages/user/collect/collect.json" afterPath="$PROJECT_DIR$/pages/user/collect/collect.json" />
-      <change beforePath="$PROJECT_DIR$/pages/user/collect/collect.wxml" afterPath="$PROJECT_DIR$/pages/user/collect/collect.wxml" />
-      <change beforePath="$PROJECT_DIR$/pages/user/index.js" afterPath="$PROJECT_DIR$/pages/user/index.js" />
-      <change beforePath="$PROJECT_DIR$/pages/user/index.json" afterPath="$PROJECT_DIR$/pages/user/index.json" />
-      <change beforePath="$PROJECT_DIR$/pages/user/index.wxml" afterPath="$PROJECT_DIR$/pages/user/index.wxml" />
-      <change beforePath="$PROJECT_DIR$/pages/user/myorder/myorder.js" afterPath="$PROJECT_DIR$/pages/user/myorder/myorder.js" />
-      <change beforePath="$PROJECT_DIR$/pages/user/myorder/myorder.json" afterPath="$PROJECT_DIR$/pages/user/myorder/myorder.json" />
-      <change beforePath="$PROJECT_DIR$/pages/user/myorder/myorder.wxml" afterPath="$PROJECT_DIR$/pages/user/myorder/myorder.wxml" />
-      <change beforePath="$PROJECT_DIR$/pages/user/myorder/myorder.wxss" afterPath="$PROJECT_DIR$/pages/user/myorder/myorder.wxss" />
-      <change beforePath="$PROJECT_DIR$/utils/util.js" afterPath="$PROJECT_DIR$/utils/util.js" />
+      <change beforePath="$PROJECT_DIR$/project.config.json" afterPath="$PROJECT_DIR$/project.config.json" />
+      <change beforePath="$PROJECT_DIR$/utils/config.js" afterPath="$PROJECT_DIR$/utils/config.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -75,7 +22,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.39664158">
+    <splitter split-orientation="horizontal" split-proportion="0.6494218">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
           <file leaf-file-name="index.wxml" pinned="false" current-in-tab="false">
@@ -88,11 +35,41 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.wxml" pinned="false" current-in-tab="true">
+          <file leaf-file-name="index.wxml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/idealist/index.wxml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="264">
-                  <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+                <state relative-caret-position="231">
+                  <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="wxApi.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/utils/wxApi.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="483">
+                  <caret line="48" column="29" lean-forward="true" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="396">
+                  <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="wxRequest.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/utils/wxRequest.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="363">
+                  <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
                   <folding />
                 </state>
               </provider>
@@ -150,45 +127,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="index.wxml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/user/index.wxml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="6" column="7" lean-forward="false" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-                  <folding>
-                    <element signature="n#style#0;n#view#0;n#view#0;n#view#2;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="postidea.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/user/postidea/postidea.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="33">
-                  <caret line="44" column="25" lean-forward="false" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
-                  <folding>
-                    <element signature="e#2079#2219#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="course.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/index/course/course.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="27" column="15" lean-forward="false" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/utils/config.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="231">
-                  <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+                <state relative-caret-position="198">
+                  <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="17" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                   </folding>
@@ -196,11 +139,41 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/index/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1320">
-                  <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+                <state relative-caret-position="297">
+                  <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/Downloads/promise/app.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="2" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/Downloads/promise/pages/index/index.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="99">
+                  <caret line="3" column="48" lean-forward="true" selection-start-line="3" selection-start-column="48" selection-end-line="4" selection-end-column="39" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/Downloads/promise/utils/config.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="99">
+                  <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
                   <folding />
                 </state>
               </provider>
@@ -216,11 +189,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="util.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="util.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/utils/util.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="594">
-                  <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+                <state relative-caret-position="363">
+                  <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
                   <folding />
                 </state>
               </provider>
@@ -263,9 +236,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pages/idealist/index.wxss" />
-        <option value="$PROJECT_DIR$/pages/user/index.wxss" />
-        <option value="F:/blogtest/.htaccess" />
         <option value="F:/blogtest/_layouts/defaut.html" />
         <option value="F:/blogtest/index.html" />
         <option value="F:/blogtest/_config.yml" />
@@ -310,10 +280,13 @@
         <option value="$PROJECT_DIR$/pages/index/course/course.wxss" />
         <option value="$PROJECT_DIR$/pages/index/course/course.wxml" />
         <option value="$PROJECT_DIR$/pages/index/course/course.js" />
-        <option value="$PROJECT_DIR$/utils/config.js" />
-        <option value="$PROJECT_DIR$/pages/index/index.js" />
         <option value="$PROJECT_DIR$/pages/index/cheng/cheng.js" />
         <option value="$PROJECT_DIR$/utils/util.js" />
+        <option value="$PROJECT_DIR$/utils/wxRequest.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/utils/config.js" />
+        <option value="$PROJECT_DIR$/utils/wxApi.js" />
+        <option value="$PROJECT_DIR$/pages/index/index.js" />
       </list>
     </option>
   </component>
@@ -330,8 +303,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="149" />
-    <option name="width" value="1778" />
+    <option name="x" value="208" />
+    <option name="y" value="7" />
+    <option name="width" value="1687" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -361,6 +335,22 @@
               <item name="wx-hzss" type="b2602c69:ProjectViewProjectNode" />
               <item name="wx-hzss" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wx-hzss" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wx-hzss" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wx-hzss" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wx-hzss" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wx-hzss" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wx-hzss" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -420,7 +410,7 @@
       <workItem from="1516843991745" duration="24388000" />
       <workItem from="1516928852865" duration="15392000" />
       <workItem from="1516960770152" duration="572000" />
-      <workItem from="1517016734230" duration="4178000" />
+      <workItem from="1517016734230" duration="14246000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1516435910224</created>
@@ -433,13 +423,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114265000" />
+    <option name="totallyTimeSpent" value="124333000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="149" y="0" width="1778" height="1047" extended-state="0" />
-    <editor active="true" />
+    <frame x="208" y="7" width="1687" height="1047" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09919262" sideWeight="0.49602723" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14303105" sideWeight="0.49602723" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -476,51 +465,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/cheng.JPG">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/header.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/team/team.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/cheng/cheng.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="9" column="15" lean-forward="true" selection-start-line="9" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/team/team.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/team/team.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/cheng/cheng.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="38" column="12" lean-forward="false" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/previous/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -776,7 +720,7 @@
         <state relative-caret-position="198">
           <caret line="6" column="7" lean-forward="false" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
           <folding>
-            <element signature="n#style#0;n#view#0;n#view#0;n#view#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#view#0;n#view#0;n#view#2;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -788,14 +732,6 @@
           <folding>
             <element signature="e#2079#2219#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/course/course.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -815,20 +751,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/config.js">
+    <entry file="file://$PROJECT_DIR$/plugins/es6-promise.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        <state relative-caret-position="-1782">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/index.js">
+    <entry file="file://$PROJECT_DIR$/pages/idealist/index.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="231">
+          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index/course/course.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -841,18 +793,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/idealist/index.wxml">
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+        <state relative-caret-position="396">
+          <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/util.js">
+    <entry file="file://$USER_HOME$/Downloads/promise/utils/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        <state relative-caret-position="99">
+          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/promise/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/promise/pages/index/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="3" column="48" lean-forward="true" selection-start-line="3" selection-start-column="48" selection-end-line="4" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/wxApi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="48" column="29" lean-forward="true" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/wxRequest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
           <folding />
         </state>
       </provider>
