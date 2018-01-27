@@ -1,0 +1,29 @@
+<!--pages/index/tong/tong.wxml-->
+<view class="big-title">合纵盛世</view>
+<view class="info">
+    <text>平台使命：让没有梦想的人找到梦想，助拥有梦想的人实现梦想！</text>
+    <text>平台愿景：成为中国最具正能量的企业家“强关系”平台！</text>
+    <text>价值观：正心正念，正言正行，焦点利众，伟业必成！</text>
+    <text>做人理念：德才兼备，内外兼修</text>
+    <text>学习理念：生命不止，精进不息 </text>
+    <text>平台宣言：合纵盛世同盟汇，同修同行大智慧！</text>
+</view>
+<view class="sm-title">梦想宣言</view>
+<view class="info">
+    <text>我XXX，无比的确信，我生命的意义，在于时时觉醒、日日精进，活出最真实、最自然、最强大的自己！跟随合纵盛世【同盟汇】的脚步，
+        用我毕生的精力，去帮助、影响和点亮更多人的生命！最终，带着比出生时更加纯洁的灵魂，离开这个世界……</text>
+</view>
+<view class="sm-title">【同盟汇】平台简介</view>
+<view class="info">
+    <text>【同盟汇】是中国最具正能量的企业家“强关系”平台。平台是由从全国各地众多学员中精心筛选出来的一批教育事业的传播者组成的高端事
+        业圈层，会员的身份不仅是合纵盛世商学院的学员，更是平台的事业合伙人，紧密配合平台的战略规划共同拓展全国培训市场，一起携手将中
+        国教育培训事业推向一个新的高度。</text>
+    <text>
+        【同盟汇】成员可一起开拓全国各地的培训市场，师兄师姐们在平台上一起学习，共同成长，同时，可以通过平台活动、沙龙等方式深度链
+        接、互通有无。并且有资格优先参与平台的项目投资，真正的实现与平台同呼吸、共命运。
+    </text>
+</view>
+<view class="bg">
+    <image class="htimg" src="/static/ht.png"></image>
+    <image class="bgimg" src="/static/bg3.png"></image>
+</view>

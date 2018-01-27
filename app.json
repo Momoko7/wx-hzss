@@ -1,12 +1,19 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/index/cheng/cheng",
+    "pages/index/team/team",
+    "pages/index/tong/tong",
+    "pages/index/partner/partner",
     "pages/index/course/course",
     "pages/previous/index",
+    "pages/previous/course/course",
     "pages/idealist/index",
     "pages/idealist/detail/detail",
     "pages/user/index",
     "pages/user/myorder/myorder",
+    "pages/user/postidea/postidea",
+    "pages/user/myorder/comment/comment",
     "pages/user/collect/collect",
     "pages/logs/logs"
   ],
@@ -31,12 +38,12 @@
       "selectedIconPath":"./static/tabicon/icon-2-on.png"
     }, {
       "pagePath": "pages/idealist/index",
-      "text": "感想列表",
+      "text": "精彩感想",
       "iconPath":"./static/tabicon/icon-3.png",
       "selectedIconPath":"./static/tabicon/icon-3-on.png"
     }, {
       "pagePath": "pages/user/index",
-      "text": "我的",
+      "text": "个人中心",
       "iconPath":"./static/tabicon/icon-4.png",
       "selectedIconPath":"./static/tabicon/icon-4-on.png"
     }]

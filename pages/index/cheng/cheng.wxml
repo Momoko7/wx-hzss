@@ -1,0 +1,29 @@
+<!--pages/index/cheng/cheng.wxml-->
+<view class="img-box">
+    <image src="../../../static/cheng.jpg"></image>
+</view>
+<view class="bg-class">
+    <image src="../../../static/bg2.jpg"></image>
+    <view class="showinfo">
+        <view class="title">
+            程浩南
+        </view>
+        <view class="chenginfo">
+            <text >《能量觉醒》畅销书作者</text>
+            <text >能量派 掌门人</text>
+            <text >合众盛世 创始人</text>
+            <text >亚洲能量学 宗师</text>
+            <text >“90后”演说天王</text>
+            <text >百万青年创业者 灵魂导师</text>
+            <text >亚洲培训界新一代领军人物</text>
+        </view>
+        <view class="title">
+            人生阅历
+        </view>
+        <view class="lifeinfo">
+            <text>他，19岁时大学辍学，从零底薪的基层业务员，到企业高管，到22岁成为集团公司营销总经理，再到创办公司自主创业先后历经三次创业失败……八年来，坎坷之路，他一往无前，直至今日成为百万青年创业家权威导师。</text>
+            <text>他，拥有着长达八年的演讲培训、销售实战、团队打造和企业管理经验，已累计服务超过800余家中小企业，在全国60多个城市累计开课超过1800余场，直接和间接影响了数十万人。他从实战中来，到实战中去，把自己一路走来所汲取的智慧精华整理成业内经典课程并著书立说，旨在为更多创业者、企业家传道授业解惑。</text>
+            <text>他，心系天下，胸怀大爱，竭力打造【合纵盛世商学院】“职业讲师1001将”、【同盟汇】企业家导师10001人，并且在所有学员面前立下誓言：要用自己全部的生命把合纵盛世教育集团打造成为中国第一大商界领袖型人才孵化平台——致力培养中国商界英才，助力中华民族伟大复兴！</text>
+        </view>
+    </view>
+</view>

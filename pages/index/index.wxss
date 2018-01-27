@@ -34,35 +34,3 @@ swiper image{
   border-bottom: 1rpx solid #f4f4f4;
 }
 
-/*卡片*/
-.zan-card{
-  padding: 20rpx;
-  border-bottom: 1rpx solid #f4f4f4;
-}
-.zan-card__thumb{
-  width: 330rpx;
-  height: 220rpx;
-  padding-right: 30rpx;
-}
-.zan-card__thumb image{
-  width: 100%;
-  height: 100%;
-}
-.font-yellow{
-  color: #e59d68;
-}
-.font-gray{
-  font-size: 95%;
-  color: #aaa;
-}
-.right-btn{
-  float: right;
-  color: #e59d68;
-  border: #e59d68 solid 2rpx;
-  padding: 2rpx 6rpx;
-  border-radius: 10rpx;
-  font-size: 90%;
-}
-.zan-card__left-col{
-  margin-right: 0;
-}

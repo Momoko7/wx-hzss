@@ -1,0 +1,32 @@
+/* pages/index/tong/tong.wxss */
+.big-title{
+    font-size: 115%;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2em;
+}
+.info{
+    padding: 0 20rpx;
+}
+.info text{
+    display: block;
+    font-size: 80%;
+    color: #777777;
+}
+.sm-title{
+    padding-left: 15rpx;
+    margin: 30rpx 0 10rpx 0;
+}
+.bg{
+    position: relative;
+}
+.bgimg{
+    width: 100%;
+}
+.htimg{
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: 80%;
+    margin: 20% 25% 0 25%;
+}

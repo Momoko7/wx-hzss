@@ -2,6 +2,7 @@
 //获取应用实例
 const app = getApp()
 const {extend,Tab} = require('../../zanui/index')
+import {url} from "../../utils/config"
 Page(extend({},Tab,{
     data: {
         imgUrls: [

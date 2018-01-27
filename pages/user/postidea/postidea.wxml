@@ -1,0 +1,30 @@
+<!--pages/user/postidea/postidea.wxml-->
+<form bindsubmit="postClick">
+    <textarea name="text" id="" rows="10" maxlength="400"
+              placeholder="发表您的感想..."></textarea>
+    <view class="box">
+        <view class="van-row">
+            <view wx:for="{{uploadImgs}}" wx:for-index="idx" wx:key="key"
+                  class="zan-col zan-col-6 zan-badge">
+                <view class="zan-badge__count" id="{{idx}}"
+                      wx:if="{{candel}}" bindtap="deleteImg">×</view>
+                <view class="img-box" id="{{idx}}" bindtap="imgClick" bindlongpress="longpressImg">
+                    <image src="{{item}}"></image>
+                </view>
+            </view>
+            <view wx:if="{{isshow}}" class="zan-col zan-col-6">
+                <view class="addimg" bindtap="addImgClick">
+                    +
+                </view>
+            </view>
+        </view>
+        <view style="padding-top: 30rpx">
+            <button class="zan-col-24 zan-btn {{canpost?'zan-btn--danger':'zan-btn--disabled'}}"
+                    formType="submit">{{canpost?'确认发表':'上传中...'}}</button>
+        </view>
+        <view class="tishi zan-col-24">提示：最多九张照片(长按图片可取消)</view>
+    </view>
+</form>
+
+
+

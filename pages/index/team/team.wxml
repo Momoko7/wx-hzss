@@ -1,0 +1,23 @@
+<!--pages/index/team/team.wxml-->
+<view class="bg">
+    <image src="../../../static/jstbg.png"></image>
+</view>
+
+<view class="info chenginfo">
+    <text >《能量觉醒》畅销书作者</text>
+    <text >能量派 掌门人</text>
+    <text >合众盛世 创始人</text>
+    <text >亚洲能量学 宗师</text>
+    <text >“90后”演说天王</text>
+    <text >百万青年创业者 灵魂导师</text>
+    <text >亚洲培训界新一代领军人物</text>
+</view>
+<view class="info huinfo">
+    <text >《能量觉醒》畅销书作者</text>
+    <text >能量派 掌门人</text>
+    <text >合众盛世 创始人</text>
+    <text >亚洲能量学 宗师</text>
+    <text >“90后”演说天王</text>
+    <text >百万青年创业者 灵魂导师</text>
+    <text >亚洲培训界新一代领军人物</text>
+</view>

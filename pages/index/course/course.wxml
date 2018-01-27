@@ -1,14 +1,75 @@
 <!--pages/index/course/course.wxml-->
+<import src="/zanui/tab/index.wxml"/>
+<!--轮播图 swiper start-->
+<swiper indicator-dots="true"
+        indicator-color="rgba(255,255,255,0.5)"
+        indicator-active-color="#ffffff"
+        autoplay="true">
+    <block wx:for="{{imgUrls}}" wx:key="key">
+        <swiper-item>
+            <image src="{{item}}"></image>
+        </swiper-item>
+    </block>
+</swiper>
+<!--轮播图 swiper end-->
+<view class="coursename">
+    零基础，如何跨省.....
+    零基础，如何跨省.....
+    零基础，如何跨省.....
+</view>
+<view class="flex-row">
+    <text class="res-color">￥200.00</text>
+    <view>
+        <view class="zan-icon zan-icon-password-view"></view>123
+        <view class="zan-icon zan-icon-like-o"></view>132
+    </view>
+</view>
+
+<template is="zan-tab" data="{{ ...tab, componentId: 'tab' }}"></template>
+<view wx:if="{{tab.selectedId==1}}">
+    <view class="line">
+        <view class="zan-icon zan-icon-completed"></view>
+        <text>200人已报名</text>
+    </view>
+    <view class="line">
+        <view class="zan-icon zan-icon-clock"></view>
+        <text style="color: #f24544">2017-01-01 12:00</text>
+    </view>
+    <view class="line">
+        <view class="zan-icon zan-icon-location"></view>
+        <text>地址</text>
+    </view>
+    <view class="line">
+        <view class="zan-icon zan-icon-contact"></view>
+        <text>200人已报名</text>
+    </view>
+</view>
+<view wx:else>
+    <view class="pl-bx">
+        <view class="zan-row">
+            <view class="zan-col zan-col-5">
+                <view class="header-img">
+                    <image src="/static/header.png"></image>
+                </view>
+            </view>
+            <view class="zan-col zan-col-19">
+                <view class="pl-name">名字</view>
+                <view class="pl-info">我的评论</view>
+            </view>
+        </view>
+    </view>
+</view>
 <view class="bottom-box">
     <view class="zan-row">
-        <view class="zan-col zan-col-6 border-r">
+        <view class="zan-col zan-col-6 border-r" bindtap="callClick">
             <view class="zan-icon zan-icon-chat"></view> 咨询
         </view>
-        <view class="zan-col zan-col-6">
-            <view class="zan-icon {{true?'zan-icon-like-o':'zan-icon-like'}}"></view> 收藏
+        <view class="zan-col zan-col-6" bindtap='collectClick'>
+            <view class="zan-icon {{collected?'zan-icon-like':'zan-icon-like-o'}}"></view> 收藏
         </view>
-        <view class="zan-col zan-col-12">
-            <i class="iconfont icon-baoming"></i>
+        <view class="zan-col zan-col-12 bm-btn {{isOver?'btn-gray':''}}" bindtap="callClick">
+            <view wx:if="{{!isOver}}" class="zan-icon zan-icon-add" style="font-size: 120%"></view>
+            {{isOver?'报名已截止':'我要报名'}}
         </view>
     </view>
 </view>

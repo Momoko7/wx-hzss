@@ -5,10 +5,14 @@ Page(extend({},Tab,{
      * 页面的初始数据
      */
     data: {
+        plSingle:false,
         tab: {
             list: [{
+                id: '0',
+                title: '全部'
+            },{
                 id: '1',
-                title: '代付款'
+                title: '待付款'
             }, {
                 id: '2',
                 title: '待参与'
@@ -16,7 +20,7 @@ Page(extend({},Tab,{
                 id: '3',
                 title: '待评论'
             },],
-            selectedId: '1'
+            selectedId: '0'
         },
     },
     handleZanTabChange(e) {
@@ -25,6 +29,19 @@ Page(extend({},Tab,{
         console.log(selectedId)
         this.setData({
             ['tab.selectedId']:selectedId,
+        })
+    },
+    plClick(e){
+        var _this = this
+        this.setData({
+            plSingle:!_this.data.plSingle
+        })
+    },
+    postComment(){
+        var _this = this
+        /*发表评论 判断是否为空*/
+        this.setData({
+            plSingle:!_this.data.plSingle
         })
     },
     /**

@@ -1,6 +1,6 @@
 <!--pages/idealist/index.wxml-->
 <view class="idea-list-box">
-    <navigator url="" class="a-block"  wx:for="i in 5" wx:key="key">
+    <navigator url="./detail/detail" class="a-block"  wx:for="i in 5" wx:key="key">
         <view class="zan-row">
             <view class="zan-col zan-col-6 flex-col">
                 <view class="img-box">

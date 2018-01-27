@@ -1,0 +1,34 @@
+<!--pages/index/partner/partner.wxml-->
+
+<!--轮播图 swiper start-->
+<view class=""></view>
+<swiper indicator-dots="true"
+        indicator-color="rgba(255,255,255,0.5)"
+        indicator-active-color="#ffffff"
+        autoplay="true">
+    <block wx:for="{{imgUrls}}" wx:key="key">
+        <swiper-item>
+            <image src="{{item}}"></image>
+        </swiper-item>
+    </block>
+</swiper>
+<!--轮播图 swiper end-->
+<!--精彩感想 start-->
+<view  class="idea-list-box">
+    <navigator url="" class="a-block" wx:for="i in 5" wx:key="key">
+        <view class="zan-row">
+            <view class="zan-col zan-col-6 flex-col">
+                <view class="img-box">
+                    <image src="/static/header.png"></image>
+                </view>
+                <text class="name">小明</text>
+            </view>
+            <view class="zan-col zan-col-18">
+                <view class="message">
+                    【同盟汇】成员阿萨德破耳机批发乐山大佛就，扫地方静安寺。sad佛牌。阿斯顿发生地铁，阿尔；阿斯蒂芬啊答复
+                </view>
+            </view>
+        </view>
+    </navigator>
+
+</view>

@@ -1,0 +1,14 @@
+<!--pages/index/course/course.wxml-->
+<view class="bottom-box">
+    <view class="zan-row">
+        <view class="zan-col zan-col-6 border-r">
+            <view class="zan-icon zan-icon-chat"></view> 咨询
+        </view>
+        <view class="zan-col zan-col-6">
+            <view class="zan-icon {{true?'zan-icon-like-o':'zan-icon-like'}}"></view> 收藏
+        </view>
+        <view class="zan-col zan-col-12">
+            <i class="iconfont icon-baoming"></i>
+        </view>
+    </view>
+</view>

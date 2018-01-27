@@ -1,0 +1,15 @@
+/* pages/index/course/course.wxss */
+/*引入阿里矢量图标*/
+/*@import "//at.alicdn.com/t/font_544501_wnmzb4tr3kutyb9.css";*/
+.bottom-box{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: center;
+    border-top: #f0f0f0 solid 1rpx;
+}
+.border-r{
+    border-right: #f0f0f0 solid 1rpx;
+}

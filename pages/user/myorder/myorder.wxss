@@ -1,1 +1,88 @@
 /* pages/user/myorder/myorder.wxss */
+ .zan-card{
+    padding: 20rpx;
+    border-bottom: 1rpx solid #f4f4f4;
+}
+.zan-card__thumb{
+    width: 330rpx;
+    height: 220rpx;
+    padding-right: 30rpx;
+}
+.zan-card__thumb image{
+    width: 100%;
+    height: 100%;
+}
+.font-yellow{
+    color: #e59d68;
+}
+.font-gray{
+    font-size: 95%;
+    color: #aaa;
+}
+.right-btn{
+    float: right;
+    color: #e59d68;
+    border: #e59d68 solid 2rpx;
+    padding: 2rpx 6rpx;
+    border-radius: 10rpx;
+    font-size: 90%;
+}
+.zan-card__left-col{
+    margin-right: 0;
+}
+.status{
+    float: right;
+    color: #ff5555;
+}
+
+.btn-box{
+    width: 100%;
+    height: 100rpx;
+}
+.btn{
+    display: inline-block;
+    padding: 5rpx 20rpx;
+    border-radius: 12rpx;
+    font-size: 82%;
+    float: right;
+    margin: 15rpx;
+}
+.btn-gray{
+    border: 1rpx solid #ddd;
+}
+.btn-red{
+    background: #ff4444;
+    border: 1rpx solid #ff4444;
+    color: white;
+    margin-right: 30rpx;
+}
+
+/*弹出框 评论*/
+.zan-popup__container{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.pl-box{
+    width: 100%;
+    padding: 40rpx;
+}
+.pl-box textarea{
+    text-align: left;
+    padding: 20rpx;
+    width: 85%;
+    margin-top: 30rpx;
+    border: #ee6666 1rpx solid;
+    border-radius: 20rpx;
+    font-size: 85%;
+    color: #777777;
+    line-height: 1.5em;
+    letter-spacing: 2rpx;
+}
+.pl-box .plbtn{
+    margin-top: 30rpx;
+    margin-bottom: 40rpx;
+    width: 90%;
+    height: 80rpx;
+    float: left;
+}

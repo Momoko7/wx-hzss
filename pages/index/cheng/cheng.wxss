@@ -1,0 +1,57 @@
+/* pages/index/cheng/cheng.wxss */
+.img-box{
+    width: 100%;
+}
+.img-box image{
+    width: 100%;
+    mode:widthFix;
+    height: 65vw;
+}
+.bg-class{
+    position: absolute;
+    width: 100%;
+}
+.bg-class image{
+    position: absolute;
+    right: 0;
+    width: 40%;
+    height: 50vw;
+    opacity: 0.3;
+}
+.showinfo{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.title{
+    width: 100%;
+    padding: 15rpx 20rpx;
+    border-bottom: 5rpx solid #e6b5b3;
+}
+.chenginfo{
+    width: 100%;
+    padding-left: 40rpx;
+    border-bottom: 5rpx solid #e6b5b3;
+}
+.chenginfo text{
+    font-size: 78%;
+    line-height: 1.5em;
+    color: #555;
+    display: block;
+}
+.chenginfo text:first-child{
+    margin-top: 20rpx;
+}
+.chenginfo text:last-child{
+    margin-bottom: 20rpx;
+}
+.lifeinfo{
+    padding: 20rpx 30rpx;
+}
+.lifeinfo text{
+    display: block;
+    text-indent: 2em;
+    font-size: 75%;
+    line-height: 1.5em;
+    color: #555555;
+}

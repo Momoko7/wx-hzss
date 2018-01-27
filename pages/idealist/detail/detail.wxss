@@ -1,1 +1,46 @@
 /* pages/idealist/detail/detail.wxss */
+.container{
+    padding: 20rpx;
+}
+.header-box{
+    padding: 10rpx;
+}
+.img-box{
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 120rpx;
+    overflow: hidden;
+    margin-right: 20rpx;
+}
+.img-box image{
+    width: 100%;
+    height: 100%;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.name{
+    font-weight: bold;
+}
+.time{
+    color: #999999;
+    font-size: 80%;
+}
+.message{
+    font-size: 88%;
+    color: #555555;
+    line-height: 1.5em;
+    letter-spacing: 0.1em;
+    text-indent: 2em;
+    padding-top: 20rpx;
+    margin-bottom: 20rpx;
+}
+.imgs-box{
+    text-align: center;
+}

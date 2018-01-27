@@ -6,17 +6,24 @@
     <text>{{userInfo.nickName}}</text>
 </view>
 
-<view class="zan-cell zan-cell--access" bindtap="toOrder">
+<!-- <view class="zan-cell zan-cell&#45;&#45;access" bindtap="toOrder">
     <view class="zan-cell__bd">
         <view class="zan-icon zan-icon-pending-orders" style="color: #3388ff"></view>
          我的订单
     </view>
     <view class="zan-cell__ft"></view>
-</view>
+</view> -->
 <view class="zan-cell zan-cell--access" bindtap="toCollect">
     <view class="zan-cell__bd">
         <view class="zan-icon zan-icon-like" style="color: #f24544"></view>
         我的收藏
+    </view>
+    <view class="zan-cell__ft"></view>
+</view>
+<view class="zan-cell zan-cell--access" bindtap="toPost">
+    <view class="zan-cell__bd">
+        <view class="zan-icon zan-icon-edit" style="color: #f24544"></view>
+        发布我的感想
     </view>
     <view class="zan-cell__ft"></view>
 </view>

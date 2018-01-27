@@ -1,0 +1,25 @@
+/* pages/index/team/team.wxss */
+.bg{
+    width: 100%;
+    height: 140vw;
+}
+.bg image{
+    width: 100%;
+    height: 100%;
+}
+.info{
+    position: absolute;
+    font-size: 80%;
+}
+.chenginfo{
+    top: 20vw;
+    color: white;
+    right: 8%;
+}
+.info text{
+    display: block;
+}
+.huinfo{
+    top: 91vw;
+    left: 7%;
+}

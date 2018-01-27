@@ -14,6 +14,9 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+const Promise = require('../plugins/es6-promise')
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+    Promise:Promise
 }

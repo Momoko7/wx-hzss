@@ -1,2 +1,21 @@
 <!--pages/idealist/detail/detail.wxml-->
-<text>pages/idealist/detail/detail.wxml</text>
+<view class="container">
+    <view class="header-box">
+        <view class="flex-row">
+            <view class=" img-box">
+                <image src="/static/header.png"></image>
+            </view>
+            <view class=" flex-col">
+                <text class="name">我的名字是</text>
+                <text class="time">2018-10-10</text>
+            </view>
+        </view>
+    </view>
+    <view class="message">
+        内容哦<br/> 内容哦&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 内容哦\n 内容哦 内容哦\n 内容哦，内容哦，
+    </view>
+    <view class="imgs-box">
+        <image wx:for="{{imgsUrl}}" wx:key="key" src="{{item}}" bindtap="imgClick"></image>
+    </view>
+</view>
+

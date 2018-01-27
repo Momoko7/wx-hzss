@@ -3,7 +3,6 @@
 <import src="/zanui/tab/index.wxml"/>
 
 <!--轮播图 swiper start-->
-<view class=""></view>
 <swiper indicator-dots="true"
         indicator-color="rgba(255,255,255,0.5)"
         indicator-active-color="#ffffff"
@@ -18,29 +17,29 @@
 
 <!--内容：程老师/讲师团/同盟汇/命运合伙人-->
 <view class="flex-box">
-  <view class="flex-item">
+  <navigator url="./cheng/cheng" class="flex-item">
     <image src="/static/index-1.jpg"></image>
     <text>程老师</text>
-  </view>
-  <view class="flex-item">
+  </navigator>
+  <navigator url="./team/team" class="flex-item">
     <image src="/static/index-2.jpg"></image>
     <text>讲师团</text>
-  </view>
-  <view class="flex-item">
+  </navigator>
+  <navigator url="./tong/tong" class="flex-item">
     <image src="/static/index-3.jpg"></image>
     <text>同盟汇</text>
-  </view>
-  <view class="flex-item">
+  </navigator>
+  <navigator url="./partner/partner" class="flex-item">
     <image src="/static/index-4.jpg"></image>
     <text>命运合伙人</text>
-  </view>
+  </navigator>
 </view>
 
 <!--标签页：即将开始/精彩感想 start-->
 <template is="zan-tab" data="{{ ...tab, componentId: 'tab' }}"></template>
 
 <!--即将开始 start-->
-<view wx:if="{{tab.selectedId==1}}">
+<view wx:if="{{tab.selectedId==1}}" class="previous">
   <block wx:for="abc" wx:key="key">
     <navigator url="./course/course" style="display: block">
       <view class="zan-card">
@@ -86,7 +85,7 @@
 </view>
 <!--精彩感想 start-->
 <view wx:else class="idea-list-box">
-  <navigator url="" class="a-block" wx:for="i in 5" wx:key="key">
+  <navigator url="../idealist/detail/detail" class="a-block" wx:for="i in 5" wx:key="key">
     <view class="zan-row">
       <view class="zan-col zan-col-6 flex-col">
         <view class="img-box">
@@ -97,6 +96,8 @@
       </view>
       <view class="zan-col zan-col-18">
         <view class="message">
+        【同盟汇】成员阿萨德破耳机批发乐山大佛就，扫地方静安寺。sad佛牌。阿斯顿发生地铁，阿尔；阿斯蒂芬啊答复
+        【同盟汇】成员阿萨德破耳机批发乐山大佛就，扫地方静安寺。sad佛牌。阿斯顿发生地铁，阿尔；阿斯蒂芬啊答复
         【同盟汇】成员阿萨德破耳机批发乐山大佛就，扫地方静安寺。sad佛牌。阿斯顿发生地铁，阿尔；阿斯蒂芬啊答复
         【同盟汇】成员阿萨德破耳机批发乐山大佛就，扫地方静安寺。sad佛牌。阿斯顿发生地铁，阿尔；阿斯蒂芬啊答复
         </view>
