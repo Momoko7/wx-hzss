@@ -17,6 +17,28 @@ Page({
 
     /*点击授权*/
     authorizeClick(){
+        this.getAuthorize()
+    },
+    /**
+     * 生命周期函数--监听页面加载
+     */
+    onLoad: function (options) {
+        console.log(app.globalData)
+        if (app.globalData.userInfo) {
+            this.setData({
+                userInfo: app.globalData.userInfo,
+                loginStatus:true
+            })
+        }else {
+            this.setData({
+                loginStatus:false
+            })
+        }
+    },
+
+    /*自定义函数*/
+    //授权
+    getAuthorize(){
         var _this = this
         wx.openSetting({
             success:data=>{
@@ -45,58 +67,43 @@ Page({
             },
         })
     },
-    /**
-     * 生命周期函数--监听页面加载
-     */
-    onLoad: function (options) {
-        console.log(app.globalData)
-        if (app.globalData.userInfo) {
-            this.setData({
-                userInfo: app.globalData.userInfo,
-                loginStatus:true
-            })
-        }else {
-            this.setData({
-                loginStatus:false
-            })
-        }
-    },
-
-    /*自定义函数*/
     toOrder(){
         wx.navigateTo({
             url: './myorder/myorder'
         })
     },
+
     toCollect(){
-        wx.navigateTo({
-            url: './collect/collect'
-        })
+        if(this.data.loginStatus){
+            wx.navigateTo({
+                url: './collect/collect'
+            })
+        }else {
+            wx.showModal({
+              title: '提示',
+              content: '请授权！',
+              success: res=>{
+                if (res.confirm) {
+                    this.getAuthorize()
+                }
+              }
+            })
+        }
     },
     toPost(){
-        wx.navigateTo({
-            url: './postidea/postidea'
-        })
-    },
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady: function () {
+        this.data.loginStatus ?
+            wx.navigateTo({
+                url: './postidea/postidea'
+            }) :
+            wx.showModal({
+                title: '提示',
+                content: '请授权！',
+                success: res=>{
+                    if (res.confirm) {
+                        this.getAuthorize()
+                    }
+                }
+            })
 
     },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function () {
-
-    },
-
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function () {
-
-    }
 })
