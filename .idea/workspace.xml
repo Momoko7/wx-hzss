@@ -3,22 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="760a9f8b-1e75-4f1c-9ac8-7b1e5f87b6aa" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change beforePath="$PROJECT_DIR$/app.wxss" afterPath="$PROJECT_DIR$/app.wxss" />
-      <change beforePath="$PROJECT_DIR$/pages/idealist/detail/detail.wxml" afterPath="$PROJECT_DIR$/pages/idealist/detail/detail.wxml" />
-      <change beforePath="$PROJECT_DIR$/pages/idealist/detail/detail.wxss" afterPath="$PROJECT_DIR$/pages/idealist/detail/detail.wxss" />
-      <change beforePath="$PROJECT_DIR$/pages/idealist/index.wxml" afterPath="$PROJECT_DIR$/pages/idealist/index.wxml" />
-      <change beforePath="$PROJECT_DIR$/pages/index/cheng/cheng.js" afterPath="$PROJECT_DIR$/pages/index/cheng/cheng.js" />
-      <change beforePath="$PROJECT_DIR$/pages/index/cheng/cheng.wxml" afterPath="$PROJECT_DIR$/pages/index/cheng/cheng.wxml" />
-      <change beforePath="$PROJECT_DIR$/pages/index/course/course.js" afterPath="$PROJECT_DIR$/pages/index/course/course.js" />
-      <change beforePath="$PROJECT_DIR$/pages/index/course/course.wxml" afterPath="$PROJECT_DIR$/pages/index/course/course.wxml" />
-      <change beforePath="$PROJECT_DIR$/pages/index/course/course.wxss" afterPath="$PROJECT_DIR$/pages/index/course/course.wxss" />
       <change beforePath="$PROJECT_DIR$/pages/index/index.js" afterPath="$PROJECT_DIR$/pages/index/index.js" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.wxml" afterPath="$PROJECT_DIR$/pages/index/index.wxml" />
-      <change beforePath="$PROJECT_DIR$/pages/user/index.js" afterPath="$PROJECT_DIR$/pages/user/index.js" />
-      <change beforePath="$PROJECT_DIR$/pages/user/index.wxml" afterPath="$PROJECT_DIR$/pages/user/index.wxml" />
-      <change beforePath="$PROJECT_DIR$/pages/user/index.wxss" afterPath="$PROJECT_DIR$/pages/user/index.wxss" />
-      <change beforePath="$PROJECT_DIR$/utils/config.js" afterPath="$PROJECT_DIR$/utils/config.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,7 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.35216677">
+    <splitter split-orientation="horizontal" split-proportion="0.5966487">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
           <file leaf-file-name="wxApi.js" pinned="false" current-in-tab="false">
@@ -47,8 +32,8 @@
           <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/index/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="296">
-                  <caret line="77" column="40" lean-forward="false" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
+                <state relative-caret-position="626">
+                  <caret line="78" column="21" lean-forward="false" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                     <element signature="e#779#902#0" expanded="false" />
@@ -127,8 +112,8 @@
           <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/user/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="862">
-                  <caret line="41" column="23" lean-forward="true" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+                <state relative-caret-position="198">
+                  <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                   </folding>
@@ -217,10 +202,10 @@
         <option value="$PROJECT_DIR$/pages/index/course/course.js" />
         <option value="$PROJECT_DIR$/pages/index/course/course.wxml" />
         <option value="$PROJECT_DIR$/pages/index/course/course.wxss" />
-        <option value="$PROJECT_DIR$/pages/index/index.js" />
         <option value="$PROJECT_DIR$/pages/user/index.wxss" />
         <option value="$PROJECT_DIR$/pages/user/index.wxml" />
         <option value="$PROJECT_DIR$/pages/user/index.js" />
+        <option value="$PROJECT_DIR$/pages/index/index.js" />
       </list>
     </option>
   </component>
@@ -341,7 +326,7 @@
       <workItem from="1516960770152" duration="572000" />
       <workItem from="1517016734230" duration="27922000" />
       <workItem from="1517115810050" duration="8121000" />
-      <workItem from="1517188235111" duration="16047000" />
+      <workItem from="1517188235111" duration="16833000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1516435910224</created>
@@ -357,16 +342,23 @@
       <option name="project" value="LOCAL" />
       <updated>1517033949559</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="添加点击授权">
+      <created>1517210471157</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1517210471157</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162177000" />
+    <option name="totallyTimeSpent" value="162963000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="28" y="7" width="1867" height="1047" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.083379045" sideWeight="0.49602723" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.083379045" sideWeight="0.49602723" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -395,7 +387,8 @@
     <MESSAGE value="first" />
     <MESSAGE value="ok" />
     <MESSAGE value="add promise" />
-    <option name="LAST_COMMIT_MESSAGE" value="add promise" />
+    <MESSAGE value="添加点击授权" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加点击授权" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -614,6 +607,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -788,8 +782,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/user/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="862">
-          <caret line="41" column="23" lean-forward="true" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+        <state relative-caret-position="198">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -798,8 +792,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/index/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="77" column="40" lean-forward="false" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
+        <state relative-caret-position="626">
+          <caret line="78" column="21" lean-forward="false" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#779#902#0" expanded="false" />

@@ -76,6 +76,7 @@ Page(extend({},Tab,{
             let imgBaseUrl = config.imgBaseUrl
             let courseRows = newArr.map(item=>{
                 item.img = imgBaseUrl + item.photo
+                item.img = imgBaseUrl + item.photo
                 return item
             })
             courseRows.imgUrl = imgBaseUrl + newArr.photo
