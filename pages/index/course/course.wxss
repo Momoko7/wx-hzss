@@ -9,6 +9,7 @@
     line-height: 90rpx;
     text-align: center;
     border-top: #f0f0f0 solid 1rpx;
+    background: white;
 }
 .border-r{
     border-right: #f0f0f0 solid 1rpx;
@@ -39,6 +40,12 @@
 .line{
     padding: 5rpx 10rpx;
     font-size: 85%;
+}
+.message{
+    font-size: 90%;
+    padding: 20rpx 40rpx;
+    color: #666;
+    margin-bottom: 100rpx;
 }
 .line .zan-icon{
     color: #55ccff;
@@ -72,4 +79,8 @@
 }
 .zan-icon-like{
   color: #ff4444;
+}
+
+.zan-tab__item{
+    text-align: left;
 }

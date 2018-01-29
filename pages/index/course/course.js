@@ -1,22 +1,18 @@
 // pages/index/course/course.js
 const { extend, Tab } = require('../../../zanui/index');
-Page(extend({}, Tab,{
 
-    /**
-     * 页面的初始数据
-     */
+var wxApi = require('../../../utils/wxApi')
+var wxRequest = require('../../../utils/wxRequest')
+import config from '../../../utils/config'
+
+Page(extend({}, Tab,{
     data: {
-        imgUrls: [
-            'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-            'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-            'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
-        ],
         isOver:true,
         collected:false,
         tab:{
             list:[{
                 id:'1',
-                title:' 课 程  介 绍 '
+                title:' 课 程 介 绍 '
             },/*{
                 id:'2',
                 title:'评价'
@@ -24,20 +20,37 @@ Page(extend({}, Tab,{
             selectedId:'1',
         },
     },
+    onLoad: function (options) {
+        var _this = this
+        var id = options.id
+        var getactivityByid = config.getactivityByid
+        wx.showToast({
+            title: '加载中',
+            icon:'loading',
+            duration:10000
+        })
+        wxRequest.getRequest(getactivityByid,{id:id}).then(
+            res=>{
+                console.log(res.data)
+                let {data:info} = res
+                info.videoUrl = config.imgBaseUrl+info.video
+                _this.setData({
+                    info:info
+                })
+            }
+        ).finally(res=>{
+            wx.hideToast()
+        })
+    },
     callClick(){
+        var phone = this.info.phone
         wx.showModal({
           title: '提示',
-          content: '拨打 1222666322？',
+          content: `拨打电话：${phone}`,
           success: res=>{
             if (res.confirm) {
                 wx.makePhoneCall({
-                    phoneNumber: '18702810836', //仅为示例，并非真实的电话号码
-                    success(){
-                        console.log('chengg')
-                    },
-                    fail(){
-                        console.log('falll')
-                    }
+                    phoneNumber: phone,
                 })
             }
           }
@@ -55,16 +68,9 @@ Page(extend({}, Tab,{
         // 用于在一个页面上使用多个 tab 时，进行区分
         // selectId 表示被选中 tab 项的 id
         var selectedId = e.selectedId;
-        console.log(selectedId)
         this.setData({
             ['tab.selectedId']:selectedId,
         })
-    },
-    /**
-     * 生命周期函数--监听页面加载
-     */
-    onLoad: function (options) {
-        console.log(Tab)
     },
 
     /**

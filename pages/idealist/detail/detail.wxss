@@ -43,4 +43,9 @@
 }
 .imgs-box{
     text-align: center;
+    width: 100%;
+}
+.img-box image{
+    min-width: 80%;
+    max-width: 90%;
 }

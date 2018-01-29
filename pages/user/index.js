@@ -1,26 +1,63 @@
 // pages/user/index.js
 //获取应用实例
 const app = getApp()
+var wxApi = require('../../utils/wxApi')
+var wxRequest = require('../../utils/wxRequest')
+import config from '../../utils/config'
+
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
-        motto: 'Hello World',
         userInfo: {},
-        hasUserInfo: false,
+        loginStatus:false
     },
 
+    /*点击授权*/
+    authorizeClick(){
+        var _this = this
+        wx.openSetting({
+            success:data=>{
+                if (data.authSetting["scope.userInfo"] == true) {
+                    wx.showToast({
+                        title: '授权中',
+                        icon:'loading',
+                        duration:10000
+                    })
+                    var wxLogin = wxApi.wxLogin()
+                    wxLogin().then(res=>{
+                        var wxGetUserInfo = wxApi.wxGetUserInfo()
+                        return wxGetUserInfo()
+                    }).then(res=>{
+                        console.log(res)
+                        _this.setData({
+                            userInfo:res.userInfo,
+                            loginStatus:true
+                        })
+                    }).finally(res=>{
+                        wx.hideToast()
+                    })
+                }else {
+
+                }
+            },
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        console.log(app.globalData)
         if (app.globalData.userInfo) {
             this.setData({
                 userInfo: app.globalData.userInfo,
-                hasUserInfo: true
+                loginStatus:true
+            })
+        }else {
+            this.setData({
+                loginStatus:false
             })
         }
     },
@@ -35,7 +72,6 @@ Page({
         wx.navigateTo({
             url: './collect/collect'
         })
-
     },
     toPost(){
         wx.navigateTo({

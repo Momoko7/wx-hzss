@@ -1,47 +1,40 @@
 <!--pages/index/course/course.wxml-->
 <import src="/zanui/tab/index.wxml"/>
-<!--轮播图 swiper start-->
-<swiper indicator-dots="true"
-        indicator-color="rgba(255,255,255,0.5)"
-        indicator-active-color="#ffffff"
-        autoplay="true">
-    <block wx:for="{{imgUrls}}" wx:key="key">
-        <swiper-item>
-            <image src="{{item}}"></image>
-        </swiper-item>
-    </block>
-</swiper>
-<!--轮播图 swiper end-->
+<!--视频播放 start-->
+<video style="width: 100%" direction="90"
+       src="{{info.videoUrl}}"></video>
+<!--视频播放 end-->
 <view class="coursename">
-    零基础，如何跨省.....
-    零基础，如何跨省.....
-    零基础，如何跨省.....
+    {{info.intro}}
 </view>
 <view class="flex-row">
-    <text class="res-color">￥200.00</text>
+    <text class="res-color">￥{{info.cost/100}}</text>
     <view>
-        <view class="zan-icon zan-icon-password-view"></view>123
-        <view class="zan-icon zan-icon-like-o"></view>132
+        <view class="zan-icon zan-icon-password-view"></view>{{info.browsenum}}
+        <view class="zan-icon zan-icon-like-o"></view>{{info.likenum}}
     </view>
 </view>
 
-<template is="zan-tab" data="{{ ...tab, componentId: 'tab' }}"></template>
+<template is="zan-tab" style="text-align: left" data="{{ ...tab, componentId: 'tab' }}"></template>
 <view wx:if="{{tab.selectedId==1}}">
     <view class="line">
         <view class="zan-icon zan-icon-completed"></view>
-        <text>200人已报名</text>
+        <text>{{info.number}}人已报名</text>
     </view>
     <view class="line">
         <view class="zan-icon zan-icon-clock"></view>
-        <text style="color: #f24544">2017-01-01 12:00</text>
+        <text style="color: #f24544">{{info.time}}</text>
     </view>
     <view class="line">
         <view class="zan-icon zan-icon-location"></view>
-        <text>地址</text>
+        <text>{{info.site}}</text>
     </view>
     <view class="line">
         <view class="zan-icon zan-icon-contact"></view>
-        <text>200人已报名</text>
+        <text>{{info.name}}</text>
+    </view>
+    <view class="message">
+        {{info.message}}
     </view>
 </view>
 <view wx:else>
@@ -67,9 +60,9 @@
         <view class="zan-col zan-col-6" bindtap='collectClick'>
             <view class="zan-icon {{collected?'zan-icon-like':'zan-icon-like-o'}}"></view> 收藏
         </view>
-        <view class="zan-col zan-col-12 bm-btn {{isOver?'btn-gray':''}}" bindtap="callClick">
-            <view wx:if="{{!isOver}}" class="zan-icon zan-icon-add" style="font-size: 120%"></view>
-            {{isOver?'报名已截止':'我要报名'}}
+        <view class="zan-col zan-col-12 bm-btn {{info.type==3?'btn-gray':''}}" bindtap="callClick">
+            <view wx:if="{{info.type==3?false:true}}" class="zan-icon zan-icon-add" style="font-size: 120%"></view>
+            {{info.type==3?'报名已截止':'我要报名'}}
         </view>
     </view>
 </view>

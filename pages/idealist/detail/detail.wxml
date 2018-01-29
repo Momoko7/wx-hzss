@@ -15,7 +15,7 @@
         内容哦<br/> 内容哦&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 内容哦\n 内容哦 内容哦\n 内容哦，内容哦，
     </view>
     <view class="imgs-box">
-        <image wx:for="{{imgsUrl}}" wx:key="key" src="{{item}}" bindtap="imgClick"></image>
+        <image mode="aspectFit" wx:for="{{imgsUrl}}" wx:key="key" src="{{item}}" bindtap="imgClick"></image>
     </view>
 </view>
 

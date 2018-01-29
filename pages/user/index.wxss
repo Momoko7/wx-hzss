@@ -11,8 +11,8 @@
     color: white;
 }
 .img-box{
-    width: 130rpx;
-    height: 130rpx;
+    width: 170rpx;
+    height: 170rpx;
     border-radius: 100rpx;
     overflow: hidden;
     margin-bottom: 20rpx;
@@ -26,4 +26,16 @@
 }
 .zan-cell .zan-icon{
     font-size: 120%;
+}
+
+.mask{
+    opacity: 0.5;
+}
+.sqbox{
+    width: 100%;
+    height: 170rpx;
+    line-height: 170rpx;
+    background: #ffaaaa;
+    text-align: center;
+
 }

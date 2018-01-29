@@ -46,9 +46,8 @@ swiper image{
   color: #aaaaaa;
 }
 .idea-list-box .message{
-  font-size: 75%;
   letter-spacing: 1px;
-  line-height: 1.3em;
+  line-height: 1.4em;
   color: #777777;
   margin: 0 6rpx;
   overflow:hidden;

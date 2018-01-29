@@ -6,7 +6,6 @@ App({
 
     },
     globalData: {
-        ip: 'https://192.168.5.20:8092',
         userInfo: null,
     },
 })

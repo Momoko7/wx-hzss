@@ -2,11 +2,8 @@
 //获取应用实例
 const app = getApp()
 const {extend,Tab} = require('../../zanui/index')
-//--------------------
-var util = require('../../utils/util')
 var wxApi = require('../../utils/wxApi')
 var wxRequest = require('../../utils/wxRequest')
-//------------------
 import config from '../../utils/config'
 Page(extend({},Tab,{
     data: {
@@ -28,25 +25,24 @@ Page(extend({},Tab,{
     },
     handleZanTabChange(e) {
         var selectedId = e.selectedId;
-        console.log(selectedId)
         this.setData({
             ['tab.selectedId']:selectedId,
         })
     },
     //事件处理函数
     onLoad: function () {
-        var that = this;
+        var _this = this;
         wx.showToast({
             title: '加载中',
             icon: 'loading',
             duration: 10000
         })
+        console.log('s1')
         //1.获取code
         var wxLogin = wxApi.wxLogin()
         wxLogin().then(res => {
-            console.log('1.成功了')
-            console.log(res.code)
-            var url = config.getOpenidUrl;
+            console.log('s2')
+            var getOpenidUrl = config.getOpenidUrl;
             var params = {
                 appid: "wx4edf1039098a45cd",
                 secret: "ff3f0d8017b20b5e0ee5df4599608f94",
@@ -54,46 +50,41 @@ Page(extend({},Tab,{
                 grant_type: "authorization_code"
             }
             //2.获取openid
-            return wxRequest.getRequest(url, params)
-        }).
-        then(
-            res => {
-                console.log('2.成功了')
-                console.log(res)
-                var url = app.globalData.ip + config.searchDgUrl
-                var data = util.json2Form({ phoneNumber: '15971908021' })
-                //3.获取绑定手机号码
-                return wxRequest.postRequest(url, data)
-            }, res => {
-                return '2失败了'
-            }).
-        then(res => {
-            console.log('3.成功了')
-            console.log(res)
-            //4.获取系统信息
-            var wxGetSystemInfo = wxApi.wxGetSystemInfo()
-            return wxGetSystemInfo()
-        },res=>{
-            console.log('3.失败了')
+            return wxRequest.getRequest(getOpenidUrl, params)
         }).
         then(res => {
-            console.log('4.成功了')
-            console.log(res)
-            //5.获取用户信息
+            console.log('s3')
+            /*在这里授权*/
             var wxGetUserInfo = wxApi.wxGetUserInfo()
             return wxGetUserInfo()
         }).
         then(res => {
-            console.log('5.成功了')
-            console.log(res.userInfo)
-            that.setData({
+            console.log('s4')
+            _this.setData({
                 userInfo: res.userInfo
             })
             app.globalData.userInfo = res.userInfo
-        })
-            .finally(function (res) {
-                console.log('finally~')
-                wx.hideToast()
+        }).
+        then(res => {
+            var getactivitylist = config.getactivitylist
+            return wxRequest.getRequest(getactivitylist,{
+                page:1
             })
+        }).
+        then(res => {
+            let {rows:newArr} = res.data
+            let imgBaseUrl = config.imgBaseUrl
+            let courseRows = newArr.map(item=>{
+                item.img = imgBaseUrl + item.photo
+                return item
+            })
+            courseRows.imgUrl = imgBaseUrl + newArr.photo
+            _this.setData({
+                courseRows:courseRows
+            })
+        })
+        .finally(function (res) {
+            wx.hideToast()
+        })
     },
 }))
