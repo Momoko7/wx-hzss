@@ -1,18 +1,17 @@
 <!--pages/idealist/index.wxml-->
 <view class="idea-list-box">
-    <navigator url="./detail/detail" class="a-block"  wx:for="i in 5" wx:key="key">
+    <navigator  wx:for="{{ideaList}}" url="./detail/detail?id={{item.id}}" class="a-block" wx:key="key">
         <view class="zan-row">
             <view class="zan-col zan-col-6 flex-col">
                 <view class="img-box">
-                    <image src="/static/header.png"></image>
+                    <image src="{{item.userphoto}}"></image>
                 </view>
-                <text class="name">小明</text>
-                <text class="time">2017-01-01 12:00</text>
+                <text class="name">{{item.name}}</text>
+                <text class="time" style="text-align: center">{{item.time}}</text>
             </view>
             <view class="zan-col zan-col-18 ">
                 <view class="zan-font-14 message">
-                【同盟汇】成员阿萨德破耳机批发乐山大佛就，扫地方静安寺。sad佛牌。阿斯顿发生地铁，阿尔；阿斯蒂芬啊答复
-                【同盟汇】成员阿萨德破耳机批发乐山大佛就，扫地方静安寺。sad佛牌。阿斯顿发生地铁，阿尔；阿斯蒂芬啊答复
+                    {{item.message}}
                 </view>
             </view>
         </view>

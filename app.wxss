@@ -1,6 +1,9 @@
 /**app.wxss**/
 @import "./zanui/index.wxss";
-
+@import "./wxParse/wxParse.wxss";
+view{
+    overflow: unset;
+}
 swiper{
   height: 400rpx;
 }

@@ -1,70 +1,52 @@
 // pages/index/partner/partner.js
+import config from "../../../utils/config";
+var wxRequest = require('../../../utils/wxRequest')
+
 Page({
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-      imgUrls: [
-          'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-          'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-          'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
-      ],
-  },
+    /**
+     * 页面的初始数据
+     */
+    data: {
+        imgUrls: [],
+        imgBaseUrl:config.imgBaseUrl
+    },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
-  },
+    /**
+     * 生命周期函数--监听页面加载
+     */
+    onLoad: function (options) {
+        var _this = this
+        var getadvertisings = config.getadvertisings
+        wxRequest.getRequest(getadvertisings,{id:5}).then(res=>{
+            console.log(res.data.photo)
+            var imgStr = res.data.photo || ''
+            var imgArr = imgStr.split(',')
+            var imgUrls = imgArr.map(item=>{
+                return config.imgBaseUrl + item
+            })
+            _this.setData({
+                imgUrls:imgUrls
+            })
+        })
+    },
+    onShow: function () {
+        var _this = this
+        this.getInfo(1).then(res=>{
+            console.log(res.data)
+            _this.setData({
+                showList:res.data.rows
+            })
+        })
+    },
+    getInfo(page){
+        var getpartnersByhot = config.getpartnersByhot
+        return wxRequest.getRequest(getpartnersByhot,{
+            page:page
+        })
+    },
+    onReachBottom: function () {
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
+    },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
 })

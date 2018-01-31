@@ -1,5 +1,4 @@
 /**index.wxss**/
-
 swiper{
     height: 400rpx;
 }
@@ -32,5 +31,8 @@ swiper image{
 }
 .zan-tab__bd{
     border-bottom: 1rpx solid #f4f4f4;
+}
+.name{
+    margin-top: 10rpx;
 }
 

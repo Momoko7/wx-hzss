@@ -1,6 +1,5 @@
 /* pages/index/course/course.wxss */
 /*引入阿里矢量图标*/
-/*@import "//at.alicdn.com/t/font_544501_wnmzb4tr3kutyb9.css";*/
 .bottom-box{
     position: fixed;
     bottom: 0;
@@ -10,6 +9,9 @@
     text-align: center;
     border-top: #f0f0f0 solid 1rpx;
     background: white;
+}
+.p{
+    line-height: 20rpx;
 }
 .border-r{
     border-right: #f0f0f0 solid 1rpx;
@@ -83,4 +85,13 @@
 
 .zan-tab__item{
     text-align: left;
+}
+
+/*弹出层*/
+.pop{
+    width: 80%;
+    padding-top: 50rpx;
+}
+.pop text{
+    margin: 20rpx auto 50rpx auto;
 }

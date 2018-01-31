@@ -1,4 +1,9 @@
 <!--pages/index/tong/tong.wxml-->
+<import src="/wxParse/wxParse.wxml"/>
+
+<template is="wxParse" data="{{wxParseData:message.nodes}}"/>
+
+<!--
 <view class="big-title">合纵盛世</view>
 <view class="info">
     <text>平台使命：让没有梦想的人找到梦想，助拥有梦想的人实现梦想！</text>
@@ -22,7 +27,7 @@
         【同盟汇】成员可一起开拓全国各地的培训市场，师兄师姐们在平台上一起学习，共同成长，同时，可以通过平台活动、沙龙等方式深度链
         接、互通有无。并且有资格优先参与平台的项目投资，真正的实现与平台同呼吸、共命运。
     </text>
-</view>
+</view>-->
 <view class="bg">
     <image class="htimg" src="/static/ht.png"></image>
     <image class="bgimg" src="/static/bg3.png"></image>

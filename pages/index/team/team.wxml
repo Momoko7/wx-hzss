@@ -1,4 +1,4 @@
-<!--pages/index/team/team.wxml-->
+<!--pages/index/team/team.wxml
 <view class="bg">
     <image src="../../../static/jstbg.png"></image>
 </view>
@@ -20,4 +20,8 @@
     <text >“90后”演说天王</text>
     <text >百万青年创业者 灵魂导师</text>
     <text >亚洲培训界新一代领军人物</text>
+</view>-->
+
+<view wx:for="{{imgs}}" wx:key="key">
+    <image src="{{item}}" mode="widthFix" style="width: 100%"></image>
 </view>

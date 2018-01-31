@@ -1,4 +1,7 @@
 /* pages/index/tong/tong.wxss */
+page{
+    padding: 20rpx;
+}
 .big-title{
     font-size: 115%;
     font-weight: bold;

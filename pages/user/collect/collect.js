@@ -1,66 +1,37 @@
 // pages/user/collect/collect.js
+const app = getApp()
+var wxRequest = require('../../../utils/wxRequest')
+import config from '../../../utils/config'
 Page({
+    data: {
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-  
-  },
+    },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
+    onLoad: function (options) {
+        var token = app.globalData.token
+        var getcollectactivity = config.getcollectactivity
+        var _this = this
+        wxRequest.getRequest(getcollectactivity,{
+            token:token
+        }).then(res=>{
+            console.log(res)
+            var imgBaseUrl = config.imgBaseUrl
+            let {data:resRow} = res
+            var collectList = resRow.map(item=>{
+                console.log(item)
+                item.img = imgBaseUrl + item.photo
+                if(item.type==1){
+                    item.typeinfo = item.time
+                }else if(item.type==2){
+                    item.typeinfo = '活动进行中'
+                }else {
+                    item.typeinfo = '活动已结束'
+                }
+                return item
+            })
+            _this.setData({
+                collectList:collectList
+            })
+        })
+    },
 })

@@ -5,7 +5,7 @@ function wxPromisify(fn) {
     return function (obj = {}) {
         return new Promise((resolve, reject) => {
             obj.success = function (res) {
-                //成功 pending —> resolved 参数将传递给对应的回调方法
+                //成功 pending ——> resolved 参数将传递给对应的回调方法
                 resolve(res)
             }
             obj.fail = function (res) {

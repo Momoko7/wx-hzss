@@ -2,7 +2,7 @@
 <view class="header-box">
     <view class="img-box">
         <image wx:if="{{loginStatus}}" src="{{userInfo.avatarUrl}}"></image>
-        <view wx:else class="sqbox" bindtap="authorizeClick">点击授权</view>
+        <view wx:else class="sqbox" bindtap="authorizeClick">点击登录</view>
     </view>
     <text wx:if="{{loginStatus}}">{{userInfo.nickName}}</text>
 </view>
@@ -13,7 +13,7 @@
     </view>
     <view class="zan-cell__ft"></view>
 </view> -->
-<!--如果已授权-->
+<!--如果已登录-->
 <view class="{{loginStatus?'':'mask'}}">
     <view class="zan-cell zan-cell--access" bindtap="toCollect">
         <view class="zan-cell__bd">

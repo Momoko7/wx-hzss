@@ -6,16 +6,17 @@
                 <image src="/static/header.png"></image>
             </view>
             <view class=" flex-col">
-                <text class="name">我的名字是</text>
-                <text class="time">2018-10-10</text>
+                <text class="name">{{info.name}}</text>
+                <text class="time">{{info.time}}</text>
             </view>
         </view>
     </view>
     <view class="message">
-        内容哦<br/> 内容哦&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 内容哦\n 内容哦 内容哦\n 内容哦，内容哦，
+         {{info.message}}
     </view>
     <view class="imgs-box">
-        <image mode="aspectFit" wx:for="{{imgsUrl}}" wx:key="key" src="{{item}}" bindtap="imgClick"></image>
+        <image mode="widthFix" wx:for="{{imgArr}}" wx:key="key"
+               src="{{item}}" bindtap="imgClick"></image>
     </view>
 </view>
 

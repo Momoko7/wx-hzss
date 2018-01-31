@@ -1,11 +1,11 @@
 // pages/index/course/course.js
-const { extend, Tab } = require('../../../zanui/index');
-
+const { extend, Tab,Field } = require('../../../zanui/index');
+const app = getApp()
 var wxApi = require('../../../utils/wxApi')
 var wxRequest = require('../../../utils/wxRequest')
 import config from '../../../utils/config'
-
-Page(extend({}, Tab,{
+var WxParse = require('../../../wxParse/wxParse.js')
+Page(extend({}, Tab,Field,{
     data: {
         isOver:true,
         collected:false,
@@ -19,106 +19,211 @@ Page(extend({}, Tab,{
             }*/],
             selectedId:'1',
         },
+        isShow:false
     },
     onLoad: function (options) {
+        var token = app.globalData.token
         var _this = this
         var id = options.id
-        var getactivityByid = config.getactivityByid
+        var getactivityByid = config.getactivityByid  //获取课程详情
+        var getcollectlist = config.getcollectlist    //获取收藏id列表
         wx.showToast({
             title: '加载中',
             icon:'loading',
             duration:10000
         })
-        wxRequest.getRequest(getactivityByid,{id:id}).then(
-            res=>{
-                console.log(res.data)
-                let {data:info} = res
-                info.videoUrl = config.imgBaseUrl+info.video
-                _this.setData({
-                    info:info
-                })
-            }
+        wxRequest.getRequest(getactivityByid,{id:id})
+            .then(
+                res=>{
+                    console.log(res.data)
+                    let {data:info} = res
+                    info.videoUrl = config.imgBaseUrl+info.video
+                    _this.setData({
+                        info:info
+                    })
+                    var message = info.message
+                    console.log('message',message)
+                    WxParse.wxParse('message', 'html', message, _this);
+                    if (token){
+                        console.log(token)
+                        wxRequest.getRequest(getcollectlist,{
+                            token:token
+                        }).then(res=>{
+                            var isCollected = res.data.map(item=>{
+                                if (item.pid == id){
+                                    return true
+                                }
+                            }) || []
+                            if (isCollected[0]){
+                                _this.setData({
+                                    collected:true
+                                })
+                            }
+                            console.log('id列表',res)
+                        })
+                    }
+                }
         ).finally(res=>{
             wx.hideToast()
         })
     },
+    /*咨询*/
     callClick(){
         var phone = this.info.phone
         wx.showModal({
-          title: '提示',
-          content: `拨打电话：${phone}`,
-          success: res=>{
-            if (res.confirm) {
-                wx.makePhoneCall({
-                    phoneNumber: phone,
-                })
+            title: '提示',
+            content: `拨打电话：${phone}`,
+            success: res=>{
+                if (res.confirm) {
+                    wx.makePhoneCall({
+                        phoneNumber: phone,
+                    })
+                }
             }
-          }
         })
     },
+    /*报名*/
+    bmClick(){
+        var _this = this
+        var getactivityuser = config.getactivityuser
+        var token = app.globalData.token || ''
+        var id = this.data.info.id
+        if (token){
+            wxRequest.getRequest(getactivityuser,{
+                token:token,
+                id:id
+            }).then(res=>{
+                console.log(res.data)
+                if (res.data == 2){
+                    //未报名
+                    _this.setData({
+                        isShow:true
+                    })
+                }else {
+                    //已报名
+                }
+            })
+        }else {
+            _this.toLogin()
+        }
+    },
+    closeClick(){
+        this.setData({
+            isShow:false
+        })
+    },
+    // 输入框失焦时触发
+    handleZanFieldBlur({ componentId, detail}) {
+        var _this = this
+        console.log('componentId',componentId)
+        console.log('detail',detail)
+        if (componentId == 1){
+
+            _this.setData({
+                username:detail.value
+            })
+        }
+        if (componentId == 2){
+            _this.setData({
+                userphone:detail.value
+            })
+        }
+    },
+    //提交
+    postClick(){
+        var username = this.data.username || ''
+        var userphone = this.data.userphone || ''
+        var token = app.globalData.token
+        var _this = this
+        console.log(userphone)
+        console.log(username)
+        if (username && userphone){
+            wx.showModal({
+                title: '提示',
+                content: '确认提交报名信息？',
+                success: res=>{
+                    if (res.confirm) {
+                        var postactivityuser = config.postactivityuser
+                        wxRequest.getRequest(postactivityuser,{
+                            token:token,
+                            name:username,
+                            phone:userphone,
+                        }).then(res=>{
+                            console.log(res)
+                            _this.setData({
+                                isShow:false
+                            })
+                        })
+                    }
+                }
+            })
+        }else {
+            wx.showModal({
+              title: '提示',
+              content: '请填入完整信息！',
+              success: res=>{
+                if (res.confirm) {
+
+                }
+              }
+            })
+        }
+    },
+    /*点击收藏
+    * 1.判断是否已登录
+    * 2.判断是否已收藏
+    * */
     collectClick(){
-      var _this = this
-      console.log(_this.data.collected)
-      this.setData({
-        collected: !_this.data.collected
-      })
+        var _this = this
+        var token = app.globalData.token || ''
+        var pid = _this.data.info.id
+        if (token){
+            if(_this.data.collected){
+                var deletecollect = config.deletecollect
+                wxRequest.postRequest(deletecollect,{
+                    token:token,
+                    pid:pid
+                }).then(res=>{
+                    wx.showToast({
+                      title: '取消收藏'
+                    })
+                })
+            }else {
+                var postcollec = config.postcollec
+                wxRequest.postRequest(postcollec,{
+                    token:token,
+                    pid:pid
+                }).then(res=>{
+                    wx.showToast({
+                        title: '收藏成功'
+                    })
+                })
+            }
+            this.setData({
+                collected: !_this.data.collected
+            })
+        }else {
+            _this.toLogin()
+        }
+    },
+    toLogin(){
+        wx.showModal({
+            title: '提示',
+            content: '请登录后再收藏！',
+            success: res=>{
+                if (res.confirm) {
+                    wx.switchTab({
+                        url:'/pages/user/index'
+                    })
+                }
+            }
+        })
     },
     handleZanTabChange(e) {
-        // componentId 即为在模板中传入的 componentId
-        // 用于在一个页面上使用多个 tab 时，进行区分
-        // selectId 表示被选中 tab 项的 id
         var selectedId = e.selectedId;
         this.setData({
             ['tab.selectedId']:selectedId,
         })
     },
 
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload: function () {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh: function () {
-
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom: function () {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function () {
-
-    }
 }))

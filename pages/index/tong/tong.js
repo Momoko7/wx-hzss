@@ -1,4 +1,7 @@
 // pages/index/tong/tong.js
+var WxParse = require('../../../wxParse/wxParse.js')
+var wxRequest = require('../../../utils/wxRequest')
+import config from '../../../utils/config'
 Page({
 
   /**
@@ -12,7 +15,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var _this = this
+    var gettongintro = config.gettongintro
+    wxRequest.getRequest(gettongintro).then(res=>{
+      console.log(res.data.message)
+        var message = res.data.message
+        WxParse.wxParse('message', 'html', message, _this);
+    })
   },
 
   /**

@@ -1,45 +1,42 @@
 <!--pages/previous/index.wxml-->
 
 <view class="previous">
-    <block wx:for="abc" wx:key="key">
-        <navigator url="../index/course/course" style="display: block">
+    <block wx:for="{{courseRows}}" wx:key="key">
+        <navigator url="../index/course/course?id={{item.id}}" style="display: block">
             <view class="zan-card">
                 <!-- 卡片左侧商品图片 -->
                 <view class="zan-card__thumb">
                     <image class="zan-card__img"
-                           src="/static/img1.jpg"
+                           src="{{item.img}}"
                            mode="aspectFit"
                     ></image>
                 </view>
                 <!-- 卡片右侧详情描述 -->
                 <view class="zan-card__detail">
-                    <!-- 商品标题行 -->
-                    <!-- 每行可以使用 zan-card__detail-row 来控制展示区域 -->
-                    <!-- 每行里面可以用 zan-card__left-col zan-card__right-col 来控制左右展示 -->
                     <view class="zan-card__detail-row">
                         <view class=" zan-ellipsis--l2">
-                            程老师带你走进演讲的知识海洋中
+                            {{item.intro}}
                         </view>
                     </view>
-                    <!-- 商品附属信息展示行 -->
                     <view class="zan-card__detail-row zan-c-gray-darker">
-                        <view class="zan-card__left-col" style="font-size: 85%">
-                            活动已结束
+                        <view class="zan-card__left-col font-yellow" style="font-size: 85%">
+                            {{item.typeinfo}}
                         </view>
                     </view>
                     <view class="zan-card__detail-row zan-c-gray-darker">
                         <view class="zan-card__left-col font-gray">
-                            <view class="zan-icon zan-icon-password-view"></view>1232
-                            <view class="zan-icon zan-icon-like-o"></view>1322123
+                            <view class="zan-icon zan-icon-password-view"></view>{{item.browsenum}}
+                            <view class="zan-icon zan-icon-like-o"></view>{{item.likenum}}
                         </view>
                     </view>
                     <!-- 商品操作按钮相关 -->
                     <view class="zan-card__detail-row zan-c-gray-darker">
-                        <view class="zan-card__left-col zan-c-red zan-font-bold">￥200.00</view>
+                        <view class="right-btn">{{item.number}}人已报名</view>
+                        <view class="zan-card__left-col zan-c-red zan-font-bold">￥{{item.cost/100}}</view>
                     </view>
                 </view>
             </view>
         </navigator>
-    </block>
 
+    </block>
 </view>

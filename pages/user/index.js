@@ -6,24 +6,11 @@ var wxRequest = require('../../utils/wxRequest')
 import config from '../../utils/config'
 
 Page({
-
-    /**
-     * 页面的初始数据
-     */
     data: {
         userInfo: {},
         loginStatus:false
     },
-
-    /*点击授权*/
-    authorizeClick(){
-        this.getAuthorize()
-    },
-    /**
-     * 生命周期函数--监听页面加载
-     */
     onLoad: function (options) {
-        console.log(app.globalData)
         if (app.globalData.userInfo) {
             this.setData({
                 userInfo: app.globalData.userInfo,
@@ -35,16 +22,19 @@ Page({
             })
         }
     },
-
+    /*点击登录*/
+    authorizeClick(){
+        this.getAuthorize()
+    },
     /*自定义函数*/
-    //授权
+    //登录
     getAuthorize(){
         var _this = this
         wx.openSetting({
             success:data=>{
                 if (data.authSetting["scope.userInfo"] == true) {
                     wx.showToast({
-                        title: '授权中',
+                        title: '登录中',
                         icon:'loading',
                         duration:10000
                     })
@@ -53,10 +43,17 @@ Page({
                         var wxGetUserInfo = wxApi.wxGetUserInfo()
                         return wxGetUserInfo()
                     }).then(res=>{
-                        console.log(res)
                         _this.setData({
                             userInfo:res.userInfo,
                             loginStatus:true
+                        })
+                        app.globalData.userInfo = res.userInfo
+                        var token = app.globalData.token
+                        var updatedhzappuser = config.updatedhzappuser
+                        wxRequest.postRequest(updatedhzappuser,{
+                            token:token,
+                            name:res.userInfo.nickName,
+                            photo:res.userInfo.avatarUrl
                         })
                     }).finally(res=>{
                         wx.hideToast()
@@ -72,23 +69,20 @@ Page({
             url: './myorder/myorder'
         })
     },
-
     toCollect(){
-        if(this.data.loginStatus){
+        this.data.loginStatus ?
             wx.navigateTo({
                 url: './collect/collect'
-            })
-        }else {
+            }) :
             wx.showModal({
-              title: '提示',
-              content: '请授权！',
-              success: res=>{
-                if (res.confirm) {
-                    this.getAuthorize()
+                title: '提示',
+                content: '请登录！',
+                success: res=>{
+                    if (res.confirm) {
+                        this.getAuthorize()
+                    }
                 }
-              }
             })
-        }
     },
     toPost(){
         this.data.loginStatus ?
@@ -97,7 +91,7 @@ Page({
             }) :
             wx.showModal({
                 title: '提示',
-                content: '请授权！',
+                content: '请登录！',
                 success: res=>{
                     if (res.confirm) {
                         this.getAuthorize()

@@ -1,5 +1,8 @@
 <!--pages/index/course/course.wxml-->
 <import src="/zanui/tab/index.wxml"/>
+<import src="/zanui/field/index.wxml" />
+<import src="/wxParse/wxParse.wxml"/>
+
 <!--视频播放 start-->
 <video style="width: 100%" direction="90"
        src="{{info.videoUrl}}"></video>
@@ -34,7 +37,7 @@
         <text>{{info.name}}</text>
     </view>
     <view class="message">
-        {{info.message}}
+        <template is="wxParse" data="{{wxParseData:message.nodes}}"/>
     </view>
 </view>
 <view wx:else>
@@ -55,14 +58,33 @@
 <view class="bottom-box">
     <view class="zan-row">
         <view class="zan-col zan-col-6 border-r" bindtap="callClick">
-            <view class="zan-icon zan-icon-chat"></view> 咨询
+            <view class="zan-icon zan-icon-chat"></view>
+            <text class="p"> 咨询</text>
         </view>
         <view class="zan-col zan-col-6" bindtap='collectClick'>
-            <view class="zan-icon {{collected?'zan-icon-like':'zan-icon-like-o'}}"></view> 收藏
+            <view class="zan-icon {{collected?'zan-icon-like':'zan-icon-like-o'}}"></view>
+            <text class="p"> 收藏</text>
         </view>
-        <view class="zan-col zan-col-12 bm-btn {{info.type==3?'btn-gray':''}}" bindtap="callClick">
+        <view class="zan-col zan-col-12 bm-btn {{info.type==3?'btn-gray':''}}" bindtap="bmClick">
             <view wx:if="{{info.type==3?false:true}}" class="zan-icon zan-icon-add" style="font-size: 120%"></view>
-            {{info.type==3?'报名已截止':'我要报名'}}
+            <text class="p"> {{info.type==3?'报名已截止':'我要报名'}}</text>
         </view>
+    </view>
+</view>
+
+<!-- 在需要展示时，增加 zan-popup--show 类即可 -->
+<view class="zan-popup {{isShow?'zan-popup--show':''}}">
+    <!-- 遮罩层，有需要可以在遮罩层上增加点击事件 -->
+    <view class="zan-popup__mask" bindtap="closeClick"></view>
+    <!-- 弹出层的内容放在此元素内 -->
+    <view class="zan-popup__container pop">
+        <view style="text-align: center">
+            <text class="zan-font-16 zan-c-red">请填写个人信息</text>
+        </view>
+        <template is="zan-field" id="1"
+                  data="{{name:'name', title: '姓名', type: 'input', placeholder: '您的称呼',componentId:'1', value }}"></template>
+        <template is="zan-field" id="2"
+                  data="{{name:'ph', title: '电话', type: 'input',inputType:'number', placeholder: '您的联系方式',componentId:'2', value }}"></template>
+        <view class="zan-btn zan-btn--danger" style="margin-top: 30rpx" bindtap="postClick">提交</view>
     </view>
 </view>
