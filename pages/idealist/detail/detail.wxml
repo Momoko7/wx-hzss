@@ -3,7 +3,7 @@
     <view class="header-box">
         <view class="flex-row">
             <view class=" img-box">
-                <image src="/static/header.png"></image>
+                <image src="{{info.userphoto}}"></image>
             </view>
             <view class=" flex-col">
                 <text class="name">{{info.name}}</text>

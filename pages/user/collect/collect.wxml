@@ -1,5 +1,9 @@
 <!--pages/user/collect/collect.wxml-->
-<view class="previous">
+<view wx:if="{{isEmpty}}">
+    <image mode="widthFix" src="/static/nothing.png"
+           style="width: 100%;position: absolute;bottom: 0"></image>
+</view>
+<view wx:else class="previous">
     <block wx:for="{{collectList}}" wx:key="key">
         <navigator url="../../index/course/course?id={{item.id}}" style="display: block">
             <view class="zan-card">
@@ -41,3 +45,4 @@
         </navigator>
     </block>
 </view>
+

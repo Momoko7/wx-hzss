@@ -18,7 +18,6 @@ Page({
     var _this = this
     var gettongintro = config.gettongintro
     wxRequest.getRequest(gettongintro).then(res=>{
-      console.log(res.data.message)
         var message = res.data.message
         WxParse.wxParse('message', 'html', message, _this);
     })

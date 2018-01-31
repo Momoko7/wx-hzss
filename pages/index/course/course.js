@@ -35,31 +35,24 @@ Page(extend({}, Tab,Field,{
         wxRequest.getRequest(getactivityByid,{id:id})
             .then(
                 res=>{
-                    console.log(res.data)
                     let {data:info} = res
                     info.videoUrl = config.imgBaseUrl+info.video
                     _this.setData({
                         info:info
                     })
                     var message = info.message
-                    console.log('message',message)
                     WxParse.wxParse('message', 'html', message, _this);
                     if (token){
-                        console.log(token)
                         wxRequest.getRequest(getcollectlist,{
                             token:token
                         }).then(res=>{
-                            var isCollected = res.data.map(item=>{
+                            res.data.map(item=>{
                                 if (item.pid == id){
-                                    return true
+                                    _this.setData({
+                                        collected:true
+                                    })
                                 }
-                            }) || []
-                            if (isCollected[0]){
-                                _this.setData({
-                                    collected:true
-                                })
-                            }
-                            console.log('id列表',res)
+                            })
                         })
                     }
                 }
@@ -69,7 +62,7 @@ Page(extend({}, Tab,Field,{
     },
     /*咨询*/
     callClick(){
-        var phone = this.info.phone
+        var phone = this.data.info.phone
         wx.showModal({
             title: '提示',
             content: `拨打电话：${phone}`,
@@ -93,7 +86,6 @@ Page(extend({}, Tab,Field,{
                 token:token,
                 id:id
             }).then(res=>{
-                console.log(res.data)
                 if (res.data == 2){
                     //未报名
                     _this.setData({
@@ -101,6 +93,11 @@ Page(extend({}, Tab,Field,{
                     })
                 }else {
                     //已报名
+                    wx.showModal({
+                      title: '提示',
+                      content: '你已经提交过报名信息哦！',
+                        showCancel:false,
+                    })
                 }
             })
         }else {
@@ -115,10 +112,7 @@ Page(extend({}, Tab,Field,{
     // 输入框失焦时触发
     handleZanFieldBlur({ componentId, detail}) {
         var _this = this
-        console.log('componentId',componentId)
-        console.log('detail',detail)
         if (componentId == 1){
-
             _this.setData({
                 username:detail.value
             })
@@ -135,8 +129,6 @@ Page(extend({}, Tab,Field,{
         var userphone = this.data.userphone || ''
         var token = app.globalData.token
         var _this = this
-        console.log(userphone)
-        console.log(username)
         if (username && userphone){
             wx.showModal({
                 title: '提示',
@@ -144,15 +136,22 @@ Page(extend({}, Tab,Field,{
                 success: res=>{
                     if (res.confirm) {
                         var postactivityuser = config.postactivityuser
-                        wxRequest.getRequest(postactivityuser,{
+                        wxRequest.postRequest(postactivityuser,{
                             token:token,
                             name:username,
                             phone:userphone,
+                            aid:_this.data.info.id
                         }).then(res=>{
-                            console.log(res)
                             _this.setData({
                                 isShow:false
                             })
+                            if (res.statusCode == 201){
+                                wx.showModal({
+                                  title: '提示',
+                                  content: '提交成功，请保持电话畅通，稍后工作人员会与您取得联系。',
+                                    showCancel:false,
+                                })
+                            }
                         })
                     }
                 }

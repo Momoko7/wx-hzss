@@ -36,8 +36,6 @@ Page({
     //图片预览
     imgClick(e){
         var _this = this
-        console.log(e)
-        console.log(e.currentTarget)
         let idx = e.currentTarget.id
         let current = _this.data.uploadImgs[idx]
         wx.previewImage({
@@ -88,8 +86,7 @@ Page({
                                 }
                                 let upImgArrP = this.data.uploadImgs.map(item => uploadFie((item)))
                                 Promise.all(upImgArrP).then(resulte => {
-                                    var upimgStr = JSON.stringify(resulte)
-                                    console.log(upimgStr)
+                                    var upimgStr = resulte.join(',')
                                     wxRequest.postRequest(postthoughts,{
                                         token:token,
                                         photo:upimgStr,
@@ -106,24 +103,6 @@ Page({
                                         }
                                     })
                                 })
-                                /*-------------------*/
-                                /*var upImgArr = _this.data.uploadImgs.map(item=>{
-                                    wx.uploadFile({
-                                        url: upload,
-                                        filePath: item,
-                                        name: 'uploadFile',
-                                        success:res=>{
-                                            return res.data
-                                        }
-                                    })
-                                })
-                                function A(callback,value) {
-                                    callback(value)
-                                }
-                                function B(value) {
-                                    console.log(value)
-                                }
-                                A(B,upImgArr)*/
                             }else {
                                 wxRequest.postRequest(postthoughts, {
                                     token: token,
@@ -154,7 +133,6 @@ Page({
 
     },
     longpressImg(e){
-        console.log(e)
         wx.vibrateShort()
         var _this = this
         _this.setData({
@@ -162,9 +140,7 @@ Page({
         })
     },
     deleteImg(e){
-        console.log(e)
         var _this = this
-        console.log(_this.data.uploadImgs)
         wx.showModal({
             title: '确认取消上传此图？',
             content: '',

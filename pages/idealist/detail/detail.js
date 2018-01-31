@@ -17,23 +17,21 @@ Page({
     //自定义函数
     imgClick(){
       var _this = this
-        console.log(_this.data.imgsUrl)
       wx.previewImage({
         urls: _this.data.imgsUrl
       })
     },
     onLoad: function (options) {
+        var _this = this
         var getthoughtsByid = config.getthoughtsByid
         var imgBaseUrl = config.imgBaseUrl
-        var _this = this
         wxRequest.getRequest(getthoughtsByid,{
             id:options.id
         }).then(res=>{
-            var imgArr = JSON.parse(res.data.photo) || []
+            var imgArr = res.data.photo.split(',')
             imgArr = imgArr.map(item=>{
                 return imgBaseUrl+item
             })
-            console.log(imgArr)
             _this.setData({
                 info:res.data,
                 imgArr:imgArr

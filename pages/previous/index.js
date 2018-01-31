@@ -4,15 +4,37 @@ var wxRequest = require('../../utils/wxRequest')
 Page({
 
     data: {
-
+        page:1
     },
-
-    onLoad: function (options) {
-        var _this = this
+    onShow: function () {
+        this.getCourse(1).then(res => {
+            this.setData({
+                courseRows:res
+            })
+        })
+    },
+    onReachBottom(){
+        var page = this.data.page + 1
+        this.getCourse(page).then(res => {
+            var resRow = res || []
+            if (resRow.length > 0){
+                wx.showToast({
+                    title: '加载更多',
+                    icon:'loading',
+                    duration:500
+                })
+                var newRow = this.data.courseRows.concat(resRow)
+                this.setData({
+                    courseRows:newRow,
+                    page:page
+                })
+            }
+        })
+    },
+    getCourse(page){
         var getactivityByhots = config.getactivityByhots
-        wxRequest.getRequest(getactivityByhots,{page:1}).then(
+        return wxRequest.getRequest(getactivityByhots,{page:page}).then(
             res=>{
-                console.log(res)
                 let {rows:newArr} = res.data
                 let imgBaseUrl = config.imgBaseUrl
                 let courseRows = newArr.map(item=>{
@@ -26,10 +48,8 @@ Page({
                     }
                     return item
                 })
-                _this.setData({
-                    courseRows:courseRows
-                })
+                return courseRows
             }
         )
-    },
+    }
 })

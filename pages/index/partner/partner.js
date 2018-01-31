@@ -19,7 +19,6 @@ Page({
         var _this = this
         var getadvertisings = config.getadvertisings
         wxRequest.getRequest(getadvertisings,{id:5}).then(res=>{
-            console.log(res.data.photo)
             var imgStr = res.data.photo || ''
             var imgArr = imgStr.split(',')
             var imgUrls = imgArr.map(item=>{
@@ -33,7 +32,6 @@ Page({
     onShow: function () {
         var _this = this
         this.getInfo(1).then(res=>{
-            console.log(res.data)
             _this.setData({
                 showList:res.data.rows
             })

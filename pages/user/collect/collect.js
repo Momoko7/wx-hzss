@@ -4,21 +4,22 @@ var wxRequest = require('../../../utils/wxRequest')
 import config from '../../../utils/config'
 Page({
     data: {
-
+        isEmpty:false
     },
 
     onLoad: function (options) {
+
+    },
+    onShow: function () {
         var token = app.globalData.token
         var getcollectactivity = config.getcollectactivity
         var _this = this
         wxRequest.getRequest(getcollectactivity,{
             token:token
         }).then(res=>{
-            console.log(res)
             var imgBaseUrl = config.imgBaseUrl
             let {data:resRow} = res
             var collectList = resRow.map(item=>{
-                console.log(item)
                 item.img = imgBaseUrl + item.photo
                 if(item.type==1){
                     item.typeinfo = item.time
@@ -29,9 +30,15 @@ Page({
                 }
                 return item
             })
-            _this.setData({
-                collectList:collectList
-            })
+            if (collectList.length == 0){
+                _this.setData({
+                    isEmpty:true
+                })
+            }else {
+                _this.setData({
+                    collectList:collectList
+                })
+            }
         })
-    },
+    }
 })

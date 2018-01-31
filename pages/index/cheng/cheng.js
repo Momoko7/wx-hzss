@@ -23,7 +23,6 @@ Page({
         })
         wxRequest.getRequest(getchengintro).then(
             res => {
-                console.log(res)
                 let {name,photo,userintro,message,type} = res.data
                 var reg = /\n/
                 userintro = userintro.split(reg)
